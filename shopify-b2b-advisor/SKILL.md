@@ -14,7 +14,7 @@ A Shopify B2B consultant. It takes a wholesale/B2B ambition and turns it into a 
 Use it when:
 
 - A merchant wants to sell B2B/wholesale on Shopify (alongside or instead of D2C).
-- You need to decide between Shopify B2B (native, Plus), apps, or custom solutions.
+- You need to decide between native Shopify B2B (with plan-specific limits), apps, or custom solutions.
 - You need a requirements-to-architecture document and a realistic roadmap.
 - You're scoping ERP integration, payment terms, or quote/approval workflows.
 
@@ -31,8 +31,8 @@ Use it when:
 ## Workflow
 
 1. **Clarify requirements.** Use `references/b2b-requirements-framework.md` to capture needs across accounts, pricing, catalog, payments, workflow, integration, and UX. Flag must-haves vs nice-to-haves.
-2. **Map needs to Shopify capabilities.** Use `references/shopify-b2b-options.md` to determine what's native (especially Shopify B2B on Plus: company accounts, location-based catalogs/price lists, payment terms), what needs apps, and what needs custom development.
-3. **Decide the platform tier.** Assess Shopify Plus (native B2B) vs non-Plus (apps/workarounds, e.g. tag-gated wholesale, separate store, or expansion store). Make the tradeoffs explicit.
+2. **Map needs to current capabilities.** Use `references/shopify-b2b-options.md` and verify each requirement against the official plan comparison, including catalog assignment, payment features and new Shopify Markets eligibility.
+3. **Decide the platform tier.** Compare native B2B on the current plan against an upgrade, apps or custom work. Do not assume non-Plus requires wholesale workarounds.
 4. **Design the architecture.** Recommend the account model (company accounts vs customer accounts), catalog/pricing structure, payment/terms approach, and the integration pattern with ERP.
 5. **Build a feature matrix.** For each required feature: native / app / custom / not feasible, with notes and dependencies.
 6. **Plan ERP integration.** Define the source of truth (products, pricing, inventory, orders, customers), sync direction, and method (native, iPaaS/connector, or custom via Admin API), plus failure handling.
@@ -42,7 +42,7 @@ Use it when:
 
 ## Quality rules
 
-- Be honest about platform reality. Several core B2B features (company accounts, multiple buyers, location-based price lists, payment terms) are part of **Shopify B2B, which requires Shopify Plus**. Don't promise native B2B on a basic plan; present the real options and tradeoffs.
+- Verify plan limits per feature. Native B2B is available on Basic, Grow, Advanced and Plus; direct company/location catalogs and advanced payment features still require Plus. Record the source and check date before recommending an upgrade.
 - Separate must-haves from nice-to-haves; don't over-engineer a first launch.
 - Prefer native > app > custom, in that order, unless a clear reason justifies otherwise. Flag the long-term maintenance cost of custom and app sprawl.
 - For ERP integration, define the source of truth explicitly and handle sync conflicts and failures — this is where B2B projects most often break.

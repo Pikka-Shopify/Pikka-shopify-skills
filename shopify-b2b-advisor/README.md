@@ -7,7 +7,7 @@ This Skill scopes a B2B project on Shopify: what the business actually needs, wh
 ## What it's for
 
 - Selling B2B or wholesale on Shopify, alongside or instead of D2C.
-- Deciding between Shopify B2B (native, Plus), apps, or custom development.
+- Deciding between native Shopify B2B (with plan-specific limits), apps, or custom development.
 - Producing a requirements-to-architecture document and a realistic roadmap.
 - Scoping ERP integration, payment terms, or quote and approval workflows.
 
@@ -33,10 +33,9 @@ This Skill scopes a B2B project on Shopify: what the business actually needs, wh
 
 ## The honest answer on Shopify Plus
 
-Several core B2B features — company accounts, multiple buyers per company, location-based price lists, payment terms — are part of **Shopify B2B, which requires Shopify Plus.**
+Native B2B is available on Basic, Grow, Advanced and Plus, with feature-specific limits. Company accounts and net terms do not by themselves require Plus. Direct company/location catalogs and advanced payment features do. See the [official plan comparison](https://help.shopify.com/en/manual/b2b/getting-started/plan-features) and verify current store eligibility before choosing architecture.
 
-This Skill won't tell you those work on a Basic plan. It presents the real options and their trade-offs: native B2B on Plus, app-based approaches, tag-gated wholesale, or a separate expansion store. It also prefers **native over app over custom**, in that order, and flags the long-term maintenance cost of app sprawl.
-
+Prefer native capabilities on the current plan before considering an upgrade, apps or custom development.
 The other place B2B projects break is ERP integration. The Skill forces an explicit decision on the source of truth for products, pricing, inventory, orders, and customers — plus sync direction and failure handling — because that ambiguity is what sinks these builds.
 
 ## Example prompt

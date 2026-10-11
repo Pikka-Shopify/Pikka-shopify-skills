@@ -26,7 +26,7 @@ Copy-pasteable deliverable structure. Fill brackets; delete what doesn't apply.
 
 ## 2. Recommended architecture
 
-> **Platform tier.** [Plus (native B2B) vs non-Plus + apps/workaround — with the reasoning and tradeoffs.]
+> **Platform tier.** [native B2B on the current plan vs a plan upgrade or apps/custom work — with the reasoning and tradeoffs.]
 >
 > **Account model.** [Company accounts vs customer accounts; buyers/roles/locations.]
 >
@@ -52,8 +52,9 @@ flowchart LR
 
 | Requirement | Native | App | Custom | Not feasible | Notes / dependency |
 | --- | --- | --- | --- | --- | --- |
-| Company accounts | [ ] | | | | Plus only |
-| Per-company price lists | [ ] | [ ] | | | [ ] |
+| Company accounts | [ ] | | | | Basic/Grow/Advanced/Plus; confirm eligibility |
+| Direct company/location catalogs | [ ] | [ ] | | | Native direct assignment requires Plus; distinguish shared market catalogs |
+| Shared B2B market catalogs | [ ] | [ ] | | | Basic/Grow/Advanced: 3 active assignments total and new Markets required; Plus: unlimited |
 | Gated catalog | [ ] | [ ] | | | [ ] |
 | Payment terms (Net 30) | [ ] | [ ] | | | [ ] |
 | Quote workflow | | [ ] | [ ] | | [ ] |
@@ -79,8 +80,10 @@ flowchart LR
 
 | Risk | Type | Likelihood | Impact | Mitigation |
 | --- | --- | --- | --- | --- |
-| Platform fit (needs Plus) | Platform | [ ] | [ ] | Confirm plan early; map workarounds |
+| Platform fit (required feature/plan limits) | Platform | [ ] | [ ] | Confirm plan early; map workarounds |
 | ERP sync conflicts/failures | Integration | [ ] | [ ] | Define source of truth; staged sync; alerting |
 | Data migration errors | Data | [ ] | [ ] | Stage + validate; reversible; confirm before live |
 | Process change resistance | Org | [ ] | [ ] | Train reps/buyers; phased rollout |
 | Scope creep / cost overrun | Delivery | [ ] | [ ] | Lock MVP; phase the rest |
+
+Plan evidence: [official comparison](https://help.shopify.com/en/manual/b2b/getting-started/plan-features), checked 2026-10-11. Recheck for the merchant and record the source/date per capability; native B2B is not universally Plus-only.
