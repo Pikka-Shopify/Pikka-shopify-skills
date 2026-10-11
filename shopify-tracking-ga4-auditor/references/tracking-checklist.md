@@ -25,14 +25,14 @@ Identify every way tracking is loaded — overlaps cause duplicates.
 - [ ] `add_to_cart` on add (with `items`, `value`, `currency`).
 - [ ] `begin_checkout` when checkout starts.
 - [ ] `add_payment_info` / `add_shipping_info` if used.
-- [ ] `purchase` on order completion (once) with `transaction_id`, `value`, `currency`, `items`, tax/shipping.
+- [ ] `purchase` on order completion (once) with `transaction_id`, `value`, `currency`, `items`; optional `tax` and `shipping` are separate numeric parameters.
 - [ ] Events fire at the right moment, not on page load by mistake.
 
 ## 3. Purchase accuracy and reconciliation
 
 - [ ] `purchase` fires exactly once per order (no thank-you-page refresh double count).
 - [ ] `transaction_id` = the Shopify order ID/number (enables dedup and reconciliation).
-- [ ] `value` excludes/handles tax & shipping consistently with your reporting choice.
+- [ ] `value` equals the sum of discounted item `price * quantity`, excluding tax and shipping; reconcile this item-revenue basis with Shopify.
 - [ ] `currency` always present and correct (esp. multi-currency / Markets).
 - [ ] GA4 purchase count reconciles with Shopify orders (within a small, explainable variance).
 - [ ] Refunds handled if needed.
@@ -47,9 +47,9 @@ Identify every way tracking is loaded — overlaps cause duplicates.
 
 ## 5. Data layer / items payload
 
-- [ ] `items` array includes `item_id`, `item_name`, `price`, `quantity`, and ideally `item_brand`, `item_category`, `item_variant`.
+- [ ] `items` array includes at least one of `item_id` or `item_name` (both recommended), plus `price` and `quantity` for value validation, and ideally `item_brand`, `item_category`, `item_variant`.
 - [ ] `item_id` is consistent across events and matches the product/variant ID used in Merchant Center/feeds.
-- [ ] Currency and value formatted as numbers, not strings.
+- [ ] `currency` is a three-letter ISO 4217 string; `value`, `price`, `quantity`, `tax` and `shipping` are numbers when supplied.
 
 ## 6. Checkout & thank-you specifics (Shopify reality)
 

@@ -66,7 +66,7 @@ Reconciliation snapshot:
 | view_item | [ ] | PDP view | currency, value, items |
 | add_to_cart | [ ] | add action | currency, value, items |
 | begin_checkout | [ ] | checkout start | currency, value, items |
-| purchase | [ ] | order complete (once) | transaction_id, currency, value, items, tax, shipping |
+| purchase | [ ] | order complete (once) | transaction_id, currency, value, items; optional: tax, shipping |
 
 > **Consent architecture.** [CMP + Consent Mode v2 + Shopify Customer Privacy API wiring.]
 > **Server-side.** [If recommended: what, why, dedup approach.]
